@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login System</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: rgb(94, 170, 189);
+  text-align: center;
+  padding: 40px;
+}
+
+.box {
+  background: white;
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input, button {
+  width: 90%;
+  padding: 10px;
+  margin: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  background: rebeccapurple;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: rgb(202, 149, 226);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.page { display: none; }
+#login { display: block; }
+.page:target { display: block; }
+body:has(.page:target) #login { display: none; }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<div class="page" id="login">
+<h2>Login Page</h2>
+<form>
+<input type="email" placeholder="Email" required>
+<input type="password" placeholder="Password" required>
+<button type="button">Login</button>
+</form>
+<p><a href="#register">Register Now</a></p>
+<p><a href="#forgot">Forgot Password?</a></p>
+</div>
+
+<div class="page" id="register">
+<h2>Registration</h2>
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email" required>
+<input type="password" placeholder="Password" required>
+<button type="button">Register</button>
+</form>
+<p><a href="#login">Back to Login</a></p>
+</div>
+
+<div class="page" id="forgot">
+<h2>Forgot Password</h2>
+<form>
+<input type="email" placeholder="Enter Email" required>
+<button type="button">Reset Password</button>
+</form>
+<p><a href="#login">Back to Login</a></p>
+</div>
+
+<h3>Logout</h3>
+<a href="#login">Logout / Back to Login</a>
+
+</div>
+</body>
+</html>
+
